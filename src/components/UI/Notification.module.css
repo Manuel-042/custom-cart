@@ -1,0 +1,43 @@
+.notification {
+  width: 100%;
+  height: 3rem;
+  background-color: #1a8ed1;
+  padding: 0.5rem 0 0rem;
+  align-items: center;
+  color: white;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+}
+
+.notification h2,
+.notification p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.error {
+  background-color: #690000;
+}
+
+.success {
+  background-color: #1ad1b9;
+}
+
+.timerSuccess {
+  background-color: hsl(226, 90%, 46%);
+}
+
+.timerError {
+  background-color: hsl(0, 94%, 41%);
+}
+
+.timer {
+  display: block;
+  height: 6px;
+  margin-top: 10px;
+  transition: width 1s;
+}
