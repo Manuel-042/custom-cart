@@ -5,6 +5,7 @@ import { uiActions } from "../../redux/ui-slice";
 import { useDispatch } from "react-redux";
 
 const Notification = (props) => {
+  const dispatch = useDispatch();
   let specialClasses = "";
   let timerClasses = "";
 
@@ -42,11 +43,18 @@ const Notification = (props) => {
     return <div className={timeStyle} style={{ width }}></div>;
   };
 
+  const closeNotification = () => {
+    dispatch(uiActions.hideNotification());
+  };
+
   return (
     <section className={cssClasses}>
       <div className={classes.text}>
         <h2>{props.title}</h2>
         <p>{props.message}</p>
+        <button className={classes.button} onClick={closeNotification}>
+          close
+        </button>
       </div>
 
       <AnimatedDiv />
